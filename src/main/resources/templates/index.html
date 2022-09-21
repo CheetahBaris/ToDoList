@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <style>
+
+    </style>
+</head>
+
+<div class="container-fluid">
+    <!-- Background animtion-->
+    <div class="background">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+    <!-- header -->
+    <header>
+
+
+        <!-- logo -->
+        <div class="logo"><span>Nikita</span></div>
+        <!-- title & content -->
+        <section class="header-content">
+
+            <h3>Welcome to my first site.</h3>
+            <h1>Item List (<span th:text="${stuffCount}">0</span>)</h1>
+            <button id="show-add-stuff-form">Add item</button>
+            <br><br>
+            <div id="stuff-list">
+                <div th:each="stuff : ${stuffs}">
+                    <a href="#" class="stuff-link" th:attr="data-id=${stuff.id}" th:text="${stuff.name}"></a>
+                    <br><br>
+                </div>
+            </div>
+        </section>
+    </header>
+    </div>
+<!--  body -->
+
+<body>
+ <div class="background">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+</div>
+
+
+    <div id="stuff-form">
+        <form>
+            <h2>Adding an item</h2>
+            <label>Item Name:</label>
+            <input type="text" name="name" value="">
+            <label> Item Type:</label>
+            <input type="text" name="type" value="">
+            <hr>
+            <button id="save-stuff">Save</button>
+        </form>
+    </div>
+    <p th:text="${someParameter}"></p>
+
+ </body>
+</html>

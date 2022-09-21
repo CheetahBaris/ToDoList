@@ -1,0 +1,241 @@
+* {
+     font-family: cursive;
+}
+ body {
+   font-family: 'Josefin Sans', sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+
+ }
+ .container-fluid{
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   background: #FFF;
+ }
+ /* ============= Animation background ========= */
+ .background {
+   background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+   background-size: 400% 400%;
+   animation: Gradient 15s ease infinite;
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   overflow: hidden;
+   padding:0;
+   margin:0px;
+ }
+ .cube {
+   position: absolute;
+   top: 80vh;
+   left: 45vw;
+   width: 10px;
+   height: 10px;
+   border: solid 1px #D7D4E4;
+   transform-origin: top left;
+   transform: scale(0) rotate(0deg) translate(-50%, -50%);
+   animation: cube 12s ease-in forwards infinite;
+ }
+ .cube:nth-child(2n) {
+   border-color: #FFF ;
+ }
+ .cube:nth-child(2) {
+   animation-delay: 2s;
+   left: 25vw;
+   top: 40vh;
+ }
+ .cube:nth-child(3) {
+   animation-delay: 4s;
+   left: 75vw;
+   top: 50vh;
+ }
+ .cube:nth-child(4) {
+   animation-delay: 6s;
+   left: 90vw;
+   top: 10vh;
+ }
+ .cube:nth-child(5) {
+   animation-delay: 8s;
+   left: 10vw;
+   top: 85vh;
+ }
+ .cube:nth-child(6) {
+   animation-delay: 10s;
+   left: 50vw;
+   top: 10vh;
+ }
+ /* ================= Header ============ */
+ header{
+   position: absolute;
+   top:0%;
+   left: 0%;
+   width:100%;
+   margin: 0;
+   padding: 0;
+ }
+ /* navbar */
+
+ /* Logo */
+ .logo{
+   width: 102px;
+   height: 36px;
+   background: #EFEEF5;
+   margin: 83px 96px;
+   float: left;
+   transform: rotate(-30deg);
+ }
+ .logo span{
+   color: #591BC5;
+   font-size: 2em;
+   line-height: 1.2;
+   padding-left: 4px;
+   font-weight: bold;
+ }
+ /* Header content & title & button*/
+ .header-content{
+   margin-top:15%;
+   text-align: center;
+   color:  #EFEEF5;
+ }
+ .header-content h1{
+   text-transform: uppercase;
+   font-size: 3em;
+   letter-spacing: 1px;
+ }
+
+ .header-content button{
+   width: 140px;
+   margin:20px 10px;
+   color: #591BC5;
+   font-size: 17px;
+   border:1px solid #EFEEF5;
+   font-weight: 500;
+   background: #EFEEF5;
+   border-radius: 20px;
+   padding: 10px;
+   cursor:pointer;
+   transition: .3s;
+ }
+ .header-content button:hover{
+   border-radius: 0;
+ }
+ .stuff-link{
+ float: left;
+ padding-left: 34px;
+ color: white;
+ }
+
+ /* Animate Background*/
+ @keyframes Gradient {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+ @keyframes cube {
+   from {
+     transform: scale(0) rotate(0deg) translate(-50%, -50%);
+     opacity: 1;
+   }
+   to {
+     transform: scale(20) rotate(960deg) translate(-50%, -50%);
+     opacity: 0;
+   }
+ }
+
+
+  #stuff-form {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: url('https://million-wallpapers.ru/wallpapers/2/87/558105371856796/lyuminescenciya-na-krasivom-fioletovom-fone.jpg'); /* Фоновый цвет и фоновый рисунок*/
+		color: #fff; /*Цвет текста на странице*/
+		background-attachment: fixed; /* Фон страницы фиксируется */
+		background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+}
+
+#stuff-form form {
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.stuff-form {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+form {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+}
+
+#stuff-form h2 {
+    margin-top: 0;
+}
+
+#stuff-form label {
+    display: block;
+}
+
+#stuff-form form > * {
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin-bottom: 0;
+}
